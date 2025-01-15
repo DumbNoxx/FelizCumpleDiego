@@ -30,6 +30,7 @@ btnOpenElement.addEventListener('click', ()=> {
     const paperElement = document.querySelector('.paper')
     paperElement.classList.remove('close-paper')
     paperElement.classList.add('open-paper')
+    paperElement.querySelector('img').classList.add("imagen-show");
 
     // animacion del corazón
     const heartElement = document.querySelector('.heart')
@@ -45,6 +46,7 @@ btnCloseElement.addEventListener('click', ()=> {
   const coverElement = document.querySelector('.cover')
   const paperElement = document.querySelector('.paper')
   paperElement.classList.remove('open-paper')
+  paperElement.querySelector('img').classList.remove("imagen-show");
   paperElement.classList.add('close-paper')
   
   setTimeout(()=>{

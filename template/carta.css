@@ -77,7 +77,7 @@ main {
   /*  */
   z-index: -1;
   background: white;
-  width: 390px;
+  width: 395px;
   height: 180px;
 
   transition: all .75s;
@@ -123,7 +123,8 @@ main {
     top: 0;
   }
   100% {
-    top: -120px;
+    top: -12em;
+    z-index: 2;
   }
 }
 
@@ -148,6 +149,7 @@ main {
   left: 46.5%;
   margin: auto;
   font-size: 3rem;
+  z-index: 3;
 
   color: #fe3334;
 
@@ -166,11 +168,20 @@ main {
   }
 }
 .imagen{
-				display:none;
-				width:100px;
-				margin-top:10px;
-
+  display:none;
+  width:100%;
 }
+
 .imagen-show{
-				display:block;
+	display:block;
+  animation: showFadeIn 1.2s forwards;
+}
+
+@keyframes showFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

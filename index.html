@@ -1,19 +1,59 @@
 <!DOCTYPE html>
 <html>
-				<head>
-								<link rel='stylesheet' href="css/index.css">
-				</head>
-				<body>
-								<h1 id="titulo1">Feliz cumpleaños</h1>
-								<h2 id="titulo2">Diego_dev2</h2>
-								<p align="center" id="p1">
-												Te desea todo el servidor de PyE, espero la pases genial mi bro, te queremos y deja de pelear, Por favor.<br/><br/>Tkm.
-								</p>
-								<canvas id="birthday"></canvas>
-								<button id="button1"><a href="template/carta.html" target="_blank" id="a1">Dale click aca para una sorpresa</a></button>
+	<head>
+		<link rel='stylesheet' href="css/index.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>¡Feliz cumpleaños!</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
 
-								<script src='js/index.js'>
-								</script>
-				</body>
-				
+	<body>
+		<div class="w-screen h-screen flex items-center justify-center absolute z-10">
+			<div class="flex flex-col gap-10 justify-center items-center">
+				<h1 class="font-semibold text-white text-7xl opacity-0 transition-opacity duration-500 delay-1000 animate-fade-in"
+					id="delay-1">Feliz cumpleaños</h1>
+				<h2 class="font-semibold text-white text-5xl opacity-0 transition-opacity duration-500 delay-1000 animate-fade-in"
+					id="delay-2">Diego_dev2</h2>
+				<div class="opacity-0 transition-opacity duration-500 delay-1000 animate-fade-in" id="delay-4">
+					<a href="template/carta.html" target="_blank"
+						class="transition ease-in-out delay-150 bg-red-100 hover:-translate-y-1 hover:scale-110 hover:bg-red-200 duration-300 text-xl text-red-500 rounded-md p-2">Dale
+						click aca para una
+						sorpresa</a>
+				</div>
+
+				<p align="center"
+					class="text-white text-2xl opacity-0 transition-opacity duration-500 delay-1000 animate-fade-in"
+					id="delay-3">
+					Te desea todo el servidor de PyE, espero la pases genial mi bro, te queremos y deja de pelear, Por
+					favor.<br /><br />Tkm.
+				</p>
+			</div>
+		</div>
+
+		<canvas id="birthday" class="absolute top-0 bottom-0 left-0 right-0"></canvas>
+
+		<script src='js/index.js'>
+		</script>
+
+		<script>
+			// Esperar un momento para cambiar las clases
+			window.addEventListener("DOMContentLoaded", () => {
+				// Ajustar tiempos de delay
+				var elements = [
+					{ elementId: 'delay-1', delay: 500 },
+					{ elementId: 'delay-2', delay: 1000 },
+					{ elementId: 'delay-3', delay: 3000 },
+					{ elementId: 'delay-4', delay: 5000 },
+				];
+
+				elements.forEach((ele) => {
+					setTimeout(() => {
+						document.getElementById(ele.elementId).classList.add("opacity-100");
+					}, ele.delay);
+				});
+			});
+		</script>
+	</body>
+
 </html>

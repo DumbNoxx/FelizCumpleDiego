@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background: #020202;
+  cursor: crosshair;
+}
+canvas{display:block}
+#titulo1 {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F4F5F7;
+  font-family: "Impact,Charcoal,sans-serif";
+  font-size: 5em;
+  font-weight: 600;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#titulo2{
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F4F6F7;
+  font-family: "Impact,Charcoal,sans-serif";
+  font-size: 5em;
+  font-weight: 400;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#p1{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #F4F6F7;
+  font-family: "Impact,Charcoal,sans-serif";
+  font-size: 2em;
+  font-weight: 50;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#button1{
+  position:absolute;
+	top:60%;
+	left:50%;
+	font-family: "Impact,Charcoal,sans-serif";
+	color:red;
+	font-size:2em;
+	font-weight:50;
+	transform: translate(-50%,-50%);
+}
+#a1{
+  text-decoration:none;
+	color:red;
+}
+
+/* Arrriba va el index.html*/
+
+
